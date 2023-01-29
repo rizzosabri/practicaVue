@@ -5,7 +5,7 @@
             <router-link to="/login">LOGIN</router-link> |
         </li>
         <li>
-            <router-link to="/products">Lista de productos</router-link> |
+            <router-link to="/">Lista de productos</router-link> |
         </li>
         <li>
             <router-link :to=" {name: 'details', params: {id:1}} ">Detalles</router-link> |

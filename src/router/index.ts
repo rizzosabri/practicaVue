@@ -3,15 +3,14 @@ import LoginVue from '../views/Login.vue'
 import haveRoleGuard from './role-guards'
 const routes: Array<RouteRecordRaw> = [
   {
-    path: '/',
+    path: '/login',
     name: 'login',
     component: LoginVue
   },
   {
-    path: '/products',
+    path: '/',
     name: 'products',
-        beforeEnter: [haveRoleGuard],
-
+    beforeEnter: [haveRoleGuard],
     component: () => import(/* webpackChunkName: "products" */ '../views/ProductsView.vue')
   },
   {
