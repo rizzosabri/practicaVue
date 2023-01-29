@@ -1,7 +1,14 @@
 <template>
  <div v-if="!isLoading">
-        <h1>detalle del producto</h1>
-    <h3>Nombre: {{ product.title }}</h3>
+        <h1>Detalle del producto</h1>
+        <h5>ID: {{ product.id }}</h5>
+        <h3>Nombre: {{ product.title }}</h3>
+        <h3>Precio: {{ product.price }}</h3>
+        <img :src="product.images" alt="" />
+   
+    description: string;
+    category:    Category;
+    images:      string;
   </div>
   <div v-else>Cargando...</div>
 </template>
@@ -21,10 +28,7 @@ export default defineComponent({
    const { product, fetchProductById, isLoading } = useProducts();
    let aux = window.location.href.split('/')
     let id:any = aux[aux.length - 1]
-    // let user = ref<User>();
-    // fakeShopAPI
-    //   .get<unknown, AxiosResponse<User>>(`/users/${props.id}`)
-    //   .then((resp) => (user.value = resp.data));
+  
     fetchProductById(id);
     return {
       product,

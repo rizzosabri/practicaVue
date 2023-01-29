@@ -28,11 +28,9 @@ export default defineComponent({
   },
   setup() {
    
-    const hola = () => alert("hola");
+
     return {
-      alertaClick: (link: Link) => alert(link.label + " Pulsado!"),
-      hola, // sólo hay que devolver elementos que se usen en el template
-     
+      
     };
   },
 });

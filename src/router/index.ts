@@ -10,13 +10,14 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/products',
     name: 'products',
-    
+        beforeEnter: [haveRoleGuard],
+
     component: () => import(/* webpackChunkName: "products" */ '../views/ProductsView.vue')
   },
   {
     path: "/details/:id",
     name: 'details',
-
+    beforeEnter: [haveRoleGuard],
     component: () => import(/* webpackChunkName: "details" */ '../views/DetailsProductsView.vue'),
   
     

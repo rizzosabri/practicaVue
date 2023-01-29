@@ -2,7 +2,7 @@
     <nav>
       <ul>
         <li>
-            <router-link to="/">LOGIN</router-link> |
+            <router-link to="/login">LOGIN</router-link> |
         </li>
         <li>
             <router-link to="/products">Lista de productos</router-link> |
