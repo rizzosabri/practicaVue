@@ -4,7 +4,7 @@ const haveRoleGuard = (to: RouteLocation, from: RouteLocation, next: any) => {
  
   const token = localStorage.getItem("token");
   if (token) {
- 
+  
     next();
   } else {
     alert("Ha fallado el token! No puedes pasar!");

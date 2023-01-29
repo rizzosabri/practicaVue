@@ -64,6 +64,7 @@ export default defineComponent({
    
     );
     localStorage.token=response.data.access_token
+    if (response){ alert("YA PUEDE NAVEGAR") }
     },
 
 
