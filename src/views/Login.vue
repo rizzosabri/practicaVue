@@ -69,10 +69,8 @@ export default defineComponent({
     if (response){ alert("YA PUEDE NAVEGAR"),
     router.push({ name: "products" })
     }
-
   }
-    
-  },
+  }
 });
 </script>
 
