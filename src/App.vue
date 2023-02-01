@@ -15,7 +15,7 @@ import { defineComponent } from "vue";
 import NavBar from "@/components/NavBar.vue";
 import NavBarLinks from "@/components/NavBarLinks.vue";
 import { Link } from "./interfaces/link";
-
+localStorage.token=""
 
 // import DetailView from "./views/DetailView.vue"
 export default defineComponent({
