@@ -37,8 +37,10 @@
 
 <script lang="ts">
 import fakeShopApi from "@/api/fakeShopApi";
+import router from "@/router";
 import { AxiosResponse } from "axios";
 import { defineComponent } from "vue";
+import { routeLocationKey } from "vue-router";
 
 export default defineComponent({
   name: "LoginVue",
@@ -64,10 +66,11 @@ export default defineComponent({
    
     );
     localStorage.token=response.data.access_token
-    if (response){ alert("YA PUEDE NAVEGAR") }
-    },
+    if (response){ alert("YA PUEDE NAVEGAR"),
+    router.push({ name: "products" })
+    }
 
-
+  }
     
   },
 });
